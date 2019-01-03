@@ -9,7 +9,9 @@ import android.view.View;
 
 import com.example.viewer.JokeActivity;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements EndpointsAsyncTask.AsyncResponse {
+
+    private static final String EXTRA_JOKE = "extra_joke";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,10 +43,15 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void tellJoke(View view) {
-        Intent startJokeActivity = new Intent(this, JokeActivity.class);
-
-        startActivity(startJokeActivity);
+        new EndpointsAsyncTask(this).execute();
     }
 
 
+    @Override
+    public void postExecute(String joke) {
+        Intent startJokeActivity = new Intent(this, JokeActivity.class);
+        startJokeActivity.putExtra(EXTRA_JOKE, joke);
+
+        startActivity(startJokeActivity);
+    }
 }
