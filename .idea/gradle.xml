@@ -10,7 +10,7 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/backend" />
-            <option value="$PROJECT_DIR$/jokes_lib" />
+            <option value="$PROJECT_DIR$/provider" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
