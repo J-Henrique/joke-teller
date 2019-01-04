@@ -1,10 +1,6 @@
-package com.example.builditbigger;
+package com.udacity.gradle.builditbigger;
 
-import android.support.test.espresso.ViewAssertion;
 import android.support.test.rule.ActivityTestRule;
-
-import com.udacity.gradle.builditbigger.MainActivity;
-import com.udacity.gradle.builditbigger.R;
 
 import org.junit.Rule;
 import org.junit.Test;
@@ -19,7 +15,7 @@ import static android.support.test.espresso.matcher.ViewMatchers.withText;
 import static org.hamcrest.Matchers.not;
 
 @RunWith(JUnit4.class)
-public class MainActivityInstrumentedTest {
+public class MainActivityTest {
 
     @Rule
     public ActivityTestRule<MainActivity> mActivityActivity = new ActivityTestRule<>(MainActivity.class);
