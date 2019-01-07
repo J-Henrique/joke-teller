@@ -22,7 +22,7 @@ public class MyEndpoint {
     @ApiMethod(name = "fetchRandomJoke")
     public MyBean fetchRandomJoke() {
         MyBean response = new MyBean();
-        response.setData(JokesProvider.someJoke);
+        response.setData(JokesProvider.getRandomJoke());
 
         return response;
     }
